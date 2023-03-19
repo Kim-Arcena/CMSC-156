@@ -41,7 +41,7 @@ class _ButtonState extends State<Button> {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       primary: Colors.transparent,
-                      onPrimary: Colors.black,
+                      onPrimary: Color(0xFF4E8C6F),
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 24),
                       shape: RoundedRectangleBorder(
@@ -54,6 +54,7 @@ class _ButtonState extends State<Button> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
+                        color: Color(0xFF4E8C6F),
                       ),
                     ),
                   ),
@@ -72,24 +73,27 @@ class _ButtonState extends State<Button> {
                 ),
                 FloatingActionButton(
                   onPressed: () {},
-                  backgroundColor: Color(0xFFeffbfc),
                   elevation: 0,
+                  hoverColor: Colors.redAccent,
                   child: Container(
+                    height: 70,
+                    width: 70,
                     decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(100),
-                      ),
+                      color: Color(0xFFeffbfc),
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
                       boxShadow: [
                         BoxShadow(
-                          color: Color(0xffE1E8EB).withOpacity(0.35),
-                          spreadRadius: 7,
-                          blurRadius: 7,
-                          offset: Offset(3, 5),
+                          color: Color(0xFFd3e4e5).withOpacity(0.4),
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset: Offset(0, 3),
                         ),
                       ],
                     ),
+                    child: const Icon(Icons.add),
                   ),
+                  backgroundColor: Color.fromRGBO(242, 252, 249, 1),
+                  foregroundColor: Color(0xFF4E8C6F),
                 ),
               ],
             ),
@@ -140,7 +144,12 @@ class _ButtonState extends State<Button> {
                   child: SizedBox.shrink(),
                 ),
                 DropdownButton<String>(
-                  items: <String>['A', 'B', 'C', 'D'].map((String value) {
+                  items: <String>[
+                    'Option 1',
+                    'Option 2',
+                    'Option 3',
+                    'Option 4'
+                  ].map((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(value),
