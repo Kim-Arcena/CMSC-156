@@ -144,6 +144,7 @@ class _ButtonState extends State<Button> {
                   child: SizedBox.shrink(),
                 ),
                 DropdownButton<String>(
+                  dropdownColor: Color(0xFFeffbfc),
                   items: <String>[
                     'Option 1',
                     'Option 2',
@@ -170,6 +171,8 @@ class _ButtonState extends State<Button> {
                   child: SizedBox.shrink(),
                 ),
                 PopupMenuButton<String>(
+                  icon: Icon(Icons.more_vert, color: Color(0xFF4E8C6F)),
+                  color: Color(0xFFeffbfc),
                   itemBuilder: (BuildContext context) {
                     return <PopupMenuEntry<String>>[
                       const PopupMenuItem<String>(
